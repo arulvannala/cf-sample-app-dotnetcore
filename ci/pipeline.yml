@@ -1,0 +1,15 @@
+---
+resources:
+- name: cf-sample-app-dotnetcore
+  type: git
+  source:
+    uri: https://github.com/arulvannala/cf-sample-app-dotnetcore
+    branch: master
+
+jobs:
+- name: dot-net-core-app
+  plan:
+  - get: cf-sample-app-dotnetcore
+    trigger: true
+  - task: tests
+    file: cf-sample-app-dotnetcore/build.yml
