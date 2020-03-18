@@ -1,0 +1,5 @@
+---
+applications:
+- name: concourse-dot-net-app
+  memory: 1G
+  instances: 1

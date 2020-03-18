@@ -10,6 +10,6 @@ jobs:
 - name: dot-net-core-app
   plan:
   - get: cf-sample-app-dotnetcore
-    trigger: true
+      trigger: true
   - task: tests
     file: cf-sample-app-dotnetcore/build.yml
